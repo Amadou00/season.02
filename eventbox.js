@@ -2,25 +2,23 @@ function empty() {
     const EventEmitter = require('events');
     const emitter = new EventEmitter.EventEmitter;
 
-    emitter.on('event', () => {
+    emitter.on('hi', () => {
         console.log('Ch0ooooooper');
     });
 
-    emitter.emit('event');
+    emitter.emit('hi');
 }
 
 function withArgs(lst) {
     const EventEmitter = require('events');
     const emitter = new EventEmitter.EventEmitter;
     lst.forEach(element => {
-        emitter.on('event', () =>{
+        emitter.on('newFellow', () =>{
             console.log("Here come's a new pirate ->> " + element)
         });
     });
 
-    emitter.emit('event');
-
-    
+    emitter.emit('newFellow');    
 }
 
 module.exports = {
