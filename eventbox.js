@@ -9,16 +9,16 @@ function empty() {
     emitter.emit('hi');
 }
 
-function withArgs(lst) {
+function withArgs(lstName) {
     const EventEmitter = require('events');
     const emitter = new EventEmitter.EventEmitter;
-    lst.forEach(element => {
-        emitter.on('newFellow', () =>{
-            console.log("Here come's a new pirate ->> " + element)
-        });
+    lstName.forEach(element => {
+        console.log("Here come's a new pirate ->> " + element)
     });
 
-    emitter.emit('newFellow');    
+    lstName.forEach(name => {
+        emitter.emit('newFellow')
+    });  
 }
 
 module.exports = {
