@@ -4,8 +4,11 @@ const e01 = require('./eventbox.js');
 
 const e02 = require('./streambox');
 //e02.duplicate("main.js");
-e02.transform(
-    'eventbox.js', // filename
+/*e02.transform(
+    'Comp0ser.csv', // filename
     /[a-z]/g,      // regex
     (letter) => letter.toUpperCase(), // fn
   )
+*/
+//e02.csv2json('./Comp0ser.csv')
+e02.WTFIsThisPipe();
